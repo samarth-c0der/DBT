@@ -11,6 +11,12 @@ models:
           - accepted_values:
               arguments: 
                 values: ['1','2','3','4','5']
+                config:
+                  severity: warn 
+      - name: emp_salary
+        data_tests:
+          - salary_check
+
           
           
 
