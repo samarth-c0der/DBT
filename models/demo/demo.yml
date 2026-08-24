@@ -27,7 +27,10 @@ models:
     description: "Sales DBT model"
 
   - name: product
-    description: 'Product DBT model'        
+    description: 'Product DBT model'  
+
+  - name: purchase
+    description: 'Purchase DBT model'      
           
 
 sources:
@@ -54,3 +57,9 @@ sources:
     schema: PUBLIC
     tables:
       - name: PRODUCT_SRC
+
+  - name: purchase
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PURCHASE_SRC
