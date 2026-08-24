@@ -30,8 +30,14 @@ models:
     description: 'Product DBT model'  
 
   - name: purchase
-    description: 'Purchase DBT model'      
+    description: 'Purchase DBT model'  
+
+  - name: clean_orders
+    description: 'Clean orders Ephemeral DBT model'    
           
+  - name: final_orders
+    description: 'Final orders DBT model'
+
 
 sources:
   - name: employee
@@ -63,3 +69,9 @@ sources:
     schema: PUBLIC
     tables:
       - name: PURCHASE_SRC
+
+  - name: orders
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: BASE_ORDERS  
